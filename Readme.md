@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Юлия Ситдикова](https://up.htmlacademy.ru/htmlcss/28/user/38262).
-* Наставник: `Неизвестно`.
+* Наставник: [Антон Попов] (https://htmlacademy.ru/profile/joker).
 
 ---
 
