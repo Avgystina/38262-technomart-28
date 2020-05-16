@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="utf-8">
-  <title>Техномарт</title>
+  <title>Каталог Техномарта</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <!--Спец символы двойные кавычки и тире!!! -->
   <header class="main-header">
     <div class="top-panel">
       <a href="#" class="logo">
@@ -16,7 +13,7 @@
       </a>
       <input type="search" class="top-panel__search" placeholder="Поиск:">
       <a href="#" class="top-panel__bookmarks">Закладки: 0</a>
-      <a href="#" class="top-panel__basket">Корзина: 0</a>
+      <a href="#" class="top-panel__basket top-panel__basket--checked">Корзина: 10</a>
       <a href="#" class="top-panel__buy">Оформить заказ</a>
     </div>
 
@@ -26,8 +23,11 @@
         +7 (812) 555-05-55<br>
         г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
       </p>
-      <a class="imag__log-in" href="#">Войти</a>
-      <a class="imag__registration" href="#">Регистрация</a>
+      <div class="user-block">
+        <span class="user-block__user-data">Равшан Джамшутович</span>
+        <a class="user-block__orders" href="#">Мои заказы</a>
+        <a class="user-block__private-office" href="#">Личный кабинет</a>
+      </div>
     </section>
 
     <nav class="main-menu">
@@ -58,51 +58,21 @@
   </header>
 
   <main class="container">
-    <section class="promo">
-      <h2 class="promo__title">Реклама</h2>
-      <!--Блок выделен красным, размечать пока не нужно-->
-    </section>
+    <ul class="bread-crumbs">
+      <li class="bread-crumbs__item">
+        <a href="#" class="bread-crumbs__link">home</a>
+      </li>
+      <li class="bread-crumbs__item">
+        <a href="#" class="bread-crumbs__link">Каталог</a>
+      </li>
+      <li class="bread-crumbs__item">
+        <a href="#" class="bread-crumbs__link">Инструмент</a>
+      </li>
+      <li class="bread-crumbs__item">
+        <a href="#" class="bread-crumbs__link">Перфораторы</a>
+      </li>
+    </ul>
 
-    <section class="products">
-      <h2 class="products__title">Популярные товары:</h2>
-      <!--Блок выделен красным, размечать пока не нужно-->
-    </section>
-
-    <section class="manufacturers">
-      <h2 class="manufacturers__title">Популярные производители:</h2>
-      <!--Блок выделен красным, размечать пока не нужно-->
-    </section>
-
-    <section class="services">
-      <h2 class="services__title">Сервисы</h2>
-      <!--Блок выделен красным, размечать пока не нужно-->
-    </section>
-
-    <div class="slider">
-      <!--Блок выделен красным, размечать пока не нужно-->
-    </div>
-
-    <section class="company">
-      <h2 class="company__title">КОМПАНИЯ «Техномарт»</h2>
-      <p class="company__paragraph">
-        Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит
-        равнодушными любителей сэкономить на гастарбайтерах.</p>
-      <p class="company__paragraph">Мы можем доставить ваш товар в самые отдаленные точки России!
-        Техномарт работает со многими транспортными компаниями:</p>
-      <ul class="company__list">
-        <li class="company__item">Деловые линии</li>
-        <li class="company__item">Автотрейдинг</li>
-        <li class="company__item">ЖелДорЭкспедиция</li>
-      </ul>
-      <a href="#" class="company__link">Подробнее о компании</a>
-    </section>
-
-    <section class="contacts">
-      <h2 class="contacts__title">Контакты</h2>
-      <p class="contacts__paragraph">Вы можете забрать товар сами, заехав в наш офис:</p>
-      <img src="https://via.placeholder.com/150x100" alt="Карта" class="contacts__image">
-      <a href="#" class="contacts__link">Заблудились? Напишите нам!</a>
-    </section>
   </main>
 
   <footer class="main-footer">
@@ -164,5 +134,4 @@
   </footer>
 
 </body>
-
 </html>
