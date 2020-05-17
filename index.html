@@ -60,7 +60,60 @@
   <main class="container">
     <section class="promo">
       <h2 class="promo__title">Реклама</h2>
-      <!--Блок выделен красным, размечать пока не нужно-->
+      <!-- Может стоит вместо дива использовать aside? -->
+      <div class="promo__cards">
+        <section class="card">
+          <h3 class="card__title">Материалы</h3>
+          <a href="" class="card__link">на любой вкус</a>
+          <img src="https://via.placeholder.com/150x100" alt="Картинка банки с краской" class="card__picture">
+        </section>
+        <section class="card">
+          <h3 class="card__title">Инструмент</h3>
+          <a href="" class="card__link">на все случаи</a>
+          <img src="https://via.placeholder.com/150x100" alt="Картинка перфоратора" class="card__picture">
+        </section>
+        <section class="card">
+          <h3 class="card__title">Техника</h3>
+          <a href="" class="card__link">для стройки</a>
+          <img src="https://via.placeholder.com/150x100" alt="Картинка трактора" class="card__picture">
+        </section>
+        <section class="card">
+          <h3 class="card__title">Скидки 50%</h3>
+          <a href="" class="card__link">На 350 ТОВАРОВ</a>
+          <img src="https://via.placeholder.com/150x100" alt="Картинка тележки" class="card__picture">
+        </section>
+        <section class="card">
+          <h3 class="card__title">Доставка</h3>
+          <a href="" class="card__link">Бесплатно</a>
+          <img src="https://via.placeholder.com/150x100" alt="Картинка газели" class="card__picture">
+        </section>
+      </div>
+
+      <div class="promo__slider">
+        <div class="slides">
+          <!-- Вешаем фотки как фон -->
+          <div class="slides__slide">
+            <section class="first-slide first-slide--active">
+              <h3 class="first-slide__title">Перфораторы</h3>
+              <p class="first-slide__slogan">Настоящие мужские игрушки</p>
+            </section>
+
+            <section class="second-slide">
+              <h3 class="second-slide__title">Дрели</h3>
+              <p class="second-slide__slogan">Соседям на радость!</p>
+            </section>
+          </div>
+
+          <button class="slides__button-forward">Вперед</button>
+          <button class="slides__button-back">Назад</button>
+
+          <a href="catalog.html" class="slides__link">Открыть каталог</a>
+
+          <div class="slides__controls-button">
+            <!-- переключатели, добавлю позже -->
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="products">
@@ -159,7 +212,7 @@
         </li>
       </ul>
       <p class="write-htmlacademy">Обратная связь:<br>mail@htmlacademy.ru</p>
-      <p class="who-do">Разработано -<br>htmlacademy.ru</p>
+      <p class="who-do">Разработано -<br><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
     </div>
   </footer>
 

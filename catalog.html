@@ -10,7 +10,7 @@
 <body>
   <header class="main-header">
     <div class="top-panel">
-      <a href="#" class="logo">
+      <a href="index.html" class="logo">
         <img src="https://via.placeholder.com/150x100" alt="Логотип магазина Техномарт" class="logo__image">
       </a>
       <input type="search" class="top-panel__search" placeholder="Поиск:">
@@ -26,7 +26,11 @@
         г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
       </p>
       <div class="user-block">
-        <span class="user-block__user-data">Равшан Джамшутович</span>
+        <span class="user-block__user-data">
+          <!-- Не забудь потом включить в ссылку на профайл еще и иконку -->
+          <!-- Не забудь, что ссылка на иконку выхода должна вести на страницу деавторизации -->
+          <a href="" class="user-block__link-profile">Равшан Джамшутович</a>
+        </span>
         <a class="user-block__orders" href="#">Мои заказы</a>
         <a class="user-block__private-office" href="#">Личный кабинет</a>
       </div>
@@ -223,7 +227,7 @@
         </li>
       </ul>
       <p class="write-htmlacademy">Обратная связь:<br>mail@htmlacademy.ru</p>
-      <p class="who-do">Разработано -<br>htmlacademy.ru</p>
+      <p class="who-do">Разработано -<br><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
     </div>
   </footer>
 
