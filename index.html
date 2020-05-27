@@ -88,28 +88,31 @@
       </div>
 
       <div class="promo__slider">
-        <div class="slides">
-          <!-- Вешаем фотки как фон -->
-          <div class="slides__slide">
-            <section class="first-slide first-slide--active">
-              <h3 class="first-slide__title">Перфораторы</h3>
-              <p class="first-slide__slogan">Настоящие мужские игрушки</p>
-            </section>
+        <input type="radio" name="toggle" id="button_1" checked>
+        <input type="radio" name="toggle" id="button_2">
 
-            <section class="second-slide">
-              <h3 class="second-slide__title">Дрели</h3>
-              <p class="second-slide__slogan">Соседям на радость!</p>
-            </section>
+        <div class="controls-button">
+          <label for="button_1"></label>
+          <label for="button_2"></label>
+        </div>
+
+        <div class="slides">
+          <div class="slide slide--active">
+            <h3>Перфораторы</h3>
+            <p>Настоящие мужские игрушки</p>
+            <button>Вперед</button>
+            <button>Назад</button><br>
+            <!-- Небольшая красная кнопка, которая встречается в нескольких разделах страницы small-button-->
+            <a class="small-button" href="catalog.html">Открыть каталог</a>
           </div>
 
-          <button class="slides__button-forward">Вперед</button>
-          <button class="slides__button-back">Назад</button>
-
-          <!-- Небольшая красная кнопка, которая встречается в нескольких разделах страницы small-button-->
-          <a class="small-button" href="catalog.html">Открыть каталог</a>
-
-          <div class="slides__controls-button">
-            <!-- переключатели, добавлю позже -->
+          <div class="slide">
+            <h3>Дрели</h3>
+            <p>Соседям на радость!</p>
+            <button>Вперед</button>
+            <button>Назад</button><br>
+            <!-- Небольшая красная кнопка, которая встречается в нескольких разделах страницы small-button-->
+            <a class="small-button" href="catalog.html">Открыть каталог</a>
           </div>
         </div>
       </div>

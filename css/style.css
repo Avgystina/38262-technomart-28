@@ -39,6 +39,33 @@ body {}
   background-image: url('../img/delivery.png');
 }
 
+/*Первый слайдер*/
+.slide:nth-child(1) {
+  width: 620px;
+  height: 266px;
+  background-image: url('../img/punchers.jpg');
+  background-repeat: no-repeat;
+}
+
+.slide:nth-child(2) {
+  width: 620px;
+  height: 266px;
+  background-image: url('../img/drills.jpg');
+  background-repeat: no-repeat;
+}
+
+.slide {
+  display: none;
+}
+
+#button_1:checked~.slides .slide:nth-child(1) {
+  display: block;
+}
+
+#button_2:checked~.slides .slide:nth-child(2) {
+  display: block;
+}
+
 /*------------------Оформление модальных окон----------------*/
 /*Карта*/
 .map-popup {
