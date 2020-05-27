@@ -255,7 +255,7 @@
         <img class="contacts__image" src="img/map.png" width="300" height="158" alt="Карта">
       </a>
       <!-- Самая большая красная кнопка на странице. Встречается один раз -->
-      <a class="big-button" href="#">Заблудились? Напишите нам!</a>
+      <a class="big-button" href="#modal">Заблудились? Напишите нам!</a>
     </section>
   </main>
 
@@ -315,10 +315,24 @@
 
   <!--Блок карты-->
   <div class="map-popup" id="map">
-    <div class="map-popup__close">закрыть</div>
+    <div class="close-button">закрыть</div>
   </div>
 
   <!--Модальное окно с формой обратной связи-->
+  <div class="write-us" id="modal">
+    <div class="close-button">закрыть</div>
+    <form class="modal-window" action="https://echo.htmlacademy.ru/" method="post">
+      <div>
+        <label for="name-field">Ваше имя:</label>
+        <input type="text" name="user-name" id="name-field" placeholder="Имя Фамилия">
+        <label for="email-field">Ваш email:</label>
+        <input type="email" name="user-email" id="email-field" placeholder="email@example.com">
+      </div>
+      <label for="letter-field">Текст письма:</label><br>
+      <textarea name="message" cols="20" rows="10" id="letter-field" placeholder="В свободной форме"></textarea><br>
+      <input type="submit" name="button-checkout" value="Оформить заказ">
+    </form>
+  </div>
 
 </body>
 
