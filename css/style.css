@@ -11,34 +11,30 @@ body {}
 .card {
   width: 300px;
   height: 123px;
+  background-repeat: no-repeat;
 }
 
-.card:first-child {
+.card--materials {
   background-color: #FFBF47;
   background-image: url('../img/materials.png');
-  background-repeat: no-repeat;
 }
 
-.card:nth-child(2) {
+.card--tool {
   background-color: #3BBCE3;
   background-image: url('../img/tool.png');
-  background-repeat: no-repeat;
 }
 
-.card:nth-child(3) {
+.card--technique {
   background-color: #DC91D8;
   background-image: url('../img/technique.png');
-  background-repeat: no-repeat;
 }
 
-.card:nth-child(4) {
+.card--discounts {
   background-color: #8ED78F;
   background-image: url('../img/discounts.png');
-  background-repeat: no-repeat;
 }
 
-.card:nth-child(5) {
+.card--delivery {
   background-color: #FFC047;
   background-image: url('../img/delivery.png');
-  background-repeat: no-repeat;
 }
