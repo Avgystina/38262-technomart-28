@@ -38,3 +38,19 @@ body {}
   background-color: #FFC047;
   background-image: url('../img/delivery.png');
 }
+
+/*------------------Оформление модальных окон----------------*/
+/*Карта*/
+.map-popup {
+  display: flex;
+
+  width: 943px;
+  height: 449px;
+
+  /*какой вставлять background-color?*/
+  /*какую вырезать карту?*/
+  background-image: url('../img/map-popup.png');
+  border-top: 7px solid #EE3643;
+}
+
+/*Форма обратной связи*/
