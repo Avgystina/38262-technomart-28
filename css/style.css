@@ -11,34 +11,74 @@ body {}
 .card {
   width: 300px;
   height: 123px;
+  background-repeat: no-repeat;
 }
 
-.card:first-child {
+.card--materials {
   background-color: #FFBF47;
   background-image: url('../img/materials.png');
-  background-repeat: no-repeat;
 }
 
-.card:nth-child(2) {
+.card--tool {
   background-color: #3BBCE3;
   background-image: url('../img/tool.png');
-  background-repeat: no-repeat;
 }
 
-.card:nth-child(3) {
+.card--technique {
   background-color: #DC91D8;
   background-image: url('../img/technique.png');
-  background-repeat: no-repeat;
 }
 
-.card:nth-child(4) {
+.card--discounts {
   background-color: #8ED78F;
   background-image: url('../img/discounts.png');
+}
+
+.card--delivery {
+  background-color: #FFC047;
+  background-image: url('../img/delivery.png');
+}
+
+/*Первый слайдер*/
+.slide:nth-child(1) {
+  width: 620px;
+  height: 266px;
+  background-image: url('../img/punchers.jpg');
   background-repeat: no-repeat;
 }
 
-.card:nth-child(5) {
-  background-color: #FFC047;
-  background-image: url('../img/delivery.png');
+.slide:nth-child(2) {
+  width: 620px;
+  height: 266px;
+  background-image: url('../img/drills.jpg');
   background-repeat: no-repeat;
+}
+
+.slide {
+  display: none;
+}
+
+#button_1:checked~.slides .slide:nth-child(1) {
+  display: block;
+}
+
+#button_2:checked~.slides .slide:nth-child(2) {
+  display: block;
+}
+
+/*------------------Оформление модальных окон----------------*/
+/*Карта*/
+.map-popup {
+  display: block;
+  width: 943px;
+  height: 449px;
+  /*какой вставлять background-color?*/
+  /*какую вырезать карту?*/
+  background-image: url('../img/map-popup.png');
+  border-top: 7px solid #EE3643;
+}
+
+/*Форма обратной связи*/
+.write-us {
+  display: block;
 }

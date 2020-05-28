@@ -65,56 +65,54 @@
     <section class="promo">
       <h2 class="promo__title">Реклама</h2>
       <div class="promo__cards">
-        <section class="card card--new">
+        <section class="card card--materials">
           <h3 class="card__title">Материалы</h3>
           <a class="card__link" href="#">на любой вкус</a>
-          <!-- <img class="card__picture" src="https://via.placeholder.com/150x100" alt="Картинка банки с краской"> -->
         </section>
-        <section class="card">
+        <section class="card card--tool">
           <h3 class="card__title">Инструмент</h3>
           <a class="card__link" href="#">на все случаи</a>
-          <!-- <img class="card__picture" src="https://via.placeholder.com/150x100" alt="Картинка перфоратора"> -->
         </section>
-        <section class="card">
+        <section class="card card--technique">
           <h3 class="card__title">Техника</h3>
           <a class="card__link" href="#">для стройки</a>
-          <!-- <img class="card__picture" src="https://via.placeholder.com/150x100" alt="Картинка трактора"> -->
         </section>
-        <section class="card">
+        <section class="card card--discounts">
           <h3 class="card__title">Скидки 50%</h3>
           <a class="card__link" href="#">На 350 ТОВАРОВ</a>
-          <!-- <img class="card__picture" src="https://via.placeholder.com/150x100" alt="Картинка тележки"> -->
         </section>
-        <section class="card">
+        <section class="card card--delivery">
           <h3 class="card__title">Доставка</h3>
           <a class="card__link" href="#">Бесплатно</a>
-          <!-- <img class="card__picture" src="https://via.placeholder.com/150x100" alt="Картинка газели"> -->
         </section>
       </div>
 
       <div class="promo__slider">
-        <div class="slides">
-          <!-- Вешаем фотки как фон -->
-          <div class="slides__slide">
-            <section class="first-slide first-slide--active">
-              <h3 class="first-slide__title">Перфораторы</h3>
-              <p class="first-slide__slogan">Настоящие мужские игрушки</p>
-            </section>
+        <input type="radio" name="toggle" id="button_1" checked>
+        <input type="radio" name="toggle" id="button_2">
 
-            <section class="second-slide">
-              <h3 class="second-slide__title">Дрели</h3>
-              <p class="second-slide__slogan">Соседям на радость!</p>
-            </section>
+        <div class="controls-button">
+          <label for="button_1"></label>
+          <label for="button_2"></label>
+        </div>
+
+        <div class="slides">
+          <div class="slide slide--active">
+            <h3>Перфораторы</h3>
+            <p>Настоящие мужские игрушки</p>
+            <button>Вперед</button>
+            <button>Назад</button><br>
+            <!-- Небольшая красная кнопка, которая встречается в нескольких разделах страницы small-button-->
+            <a class="small-button" href="catalog.html">Открыть каталог</a>
           </div>
 
-          <button class="slides__button-forward">Вперед</button>
-          <button class="slides__button-back">Назад</button>
-
-          <!-- Небольшая красная кнопка, которая встречается в нескольких разделах страницы small-button-->
-          <a class="small-button" href="catalog.html">Открыть каталог</a>
-
-          <div class="slides__controls-button">
-            <!-- переключатели, добавлю позже -->
+          <div class="slide">
+            <h3>Дрели</h3>
+            <p>Соседям на радость!</p>
+            <button>Вперед</button>
+            <button>Назад</button><br>
+            <!-- Небольшая красная кнопка, которая встречается в нескольких разделах страницы small-button-->
+            <a class="small-button" href="catalog.html">Открыть каталог</a>
           </div>
         </div>
       </div>
@@ -256,10 +254,11 @@
     <section class="contacts">
       <h2 class="black-titles">Контакты</h2>
       <p class="contacts__paragraph">Вы можете забрать товар сами, заехав в наш офис:</p>
-      <!-- добавь ссылку на карту -->
-      <img class="contacts__image" src="img/map.png" width="300" height="158" alt="Карта">
+      <a class="contacts__map" href="#map">
+        <img class="contacts__image" src="img/map.png" width="300" height="158" alt="Карта">
+      </a>
       <!-- Самая большая красная кнопка на странице. Встречается один раз -->
-      <a class="big-button" href="#">Заблудились? Напишите нам!</a>
+      <a class="big-button" href="#modal">Заблудились? Напишите нам!</a>
     </section>
   </main>
 
@@ -316,6 +315,27 @@
       <p class="who-do">Разработано - <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a></p>
     </div>
   </footer>
+
+  <!--Блок карты-->
+  <div class="map-popup" id="map">
+    <button class="close-button">закрыть</button>
+  </div>
+
+  <!--Модальное окно с формой обратной связи-->
+  <div class="write-us" id="modal">
+    <button class="close-button">закрыть</button>
+    <form class="modal-window" action="https://echo.htmlacademy.ru/" method="post">
+      <div>
+        <label for="name-field">Ваше имя:</label>
+        <input type="text" name="user-name" id="name-field" placeholder="Имя Фамилия">
+        <label for="email-field">Ваш email:</label>
+        <input type="email" name="user-email" id="email-field" placeholder="email@example.com">
+      </div>
+      <label for="letter-field">Текст письма:</label><br>
+      <textarea name="message" cols="20" rows="10" id="letter-field" placeholder="В свободной форме"></textarea><br>
+      <input type="submit" name="button-checkout" value="Оформить заказ">
+    </form>
+  </div>
 
 </body>
 
