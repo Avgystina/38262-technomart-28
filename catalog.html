@@ -12,7 +12,7 @@
 <body>
   <header class="main-header">
     <div class="top-panel">
-      <div class="container">
+      <div class="container container--top-panel">
         <a class="logo" href="index.html">
           <img class="logo__image" src="img/logo-technomart.png" width="108" height="18" alt="Логотип магазина Техномарт">
         </a>
@@ -25,18 +25,20 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container container--magazine">
       <section class="internet-magazine">
         <h1 class="internet-magazine__title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-        <p class="internet-magazine__phone">+7 (812) 555-05-55</p>
-        <p class="internet-magazine__address">
-          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-        </p>
+        <div class="block-group">
+          <p class="internet-magazine__phone">+7 (812) 555-05-55</p>
+          <p class="internet-magazine__address">
+            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+          </p>
+        </div>
         <div class="user-block">
           <span class="user-block__user-data">
             <!-- Не забудь потом включить в ссылку на профайл еще и иконку -->
             <!-- Не забудь, что ссылка на иконку выхода должна вести на страницу деавторизации -->
-            <a class="user-block__link-profile" href="#">Равшан Джамшутович</a>
+            <a class="button-header button-header--link-profile" href="#">Равшан Джамшутович</a>
           </span>
           <a class="user-block__orders" href="#">Мои заказы</a>
           <a class="user-block__private-office" href="#">Личный кабинет</a>
@@ -204,11 +206,11 @@
 
   <footer class="main-footer">
     <div class="footer-top">
-      <div class="container">
-        <a class="logo">
+      <div class="container container--footer-top">
+        <a class="logo" href="index.html">
           <img class="logo__image" src="img/logo-technomart.png" width="108" height="18" alt="Логотип магазина Техномарт">
         </a>
-        <ul class="menu-top">
+        <ul class="menu menu--top">
           <li class="menu-top__item">
             <a class="menu-top__link" href="#">Компания</a>
           </li>
@@ -229,7 +231,7 @@
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
           +7 (812) 555-05-55
         </p>
-        <ul class="menu-bottom">
+        <ul class="menu menu--bottom">
           <li class="menu-bottom__item">
             <a class="menu-bottom__link" href="#">Материалы</a>
           </li>
@@ -247,15 +249,15 @@
     </div>
 
     <div class="footer-bottom">
-      <div class="container">
+      <div class="container container--footer-bottom">
         <p class="copyright">&copy; 2010–2019 Компания «Техномарт» Все права защищены</p>
         <div class="social-networks">
           <a class="social-networks__link" href="#">vk</a>
           <a class="social-networks__link" href="#">fb</a>
           <a class="social-networks__link" href="#">inst</a>
         </div>
-        <p class="write-htmlacademy">Обратная связь: <a href="#" target="_blank">mail@htmlacademy.ru</a></p>
-        <p class="who-do">Разработано - <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a></p>
+        <p class="write-htmlacademy">Обратная связь: <a class="orange-link" href="#" target="_blank">mail@htmlacademy.ru</a></p>
+        <p class="who-do">Разработано - <a class="orange-link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a></p>
       </div>
     </div>
   </footer>
