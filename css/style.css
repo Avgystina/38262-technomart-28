@@ -91,7 +91,6 @@
   --add-transparent3: rgba(169, 169, 169, 0.3);
   /*текст в кнопке оформить заказ при клике*/
   --add-transparent4: rgba(255, 255, 255, 0.5);
-
 }
 
 body {
@@ -135,6 +134,17 @@ img {
 
 .button:active {
   background-color: var(--error);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /*-----  ШАПКА САЙТА  -----*/
@@ -480,8 +490,7 @@ img {
 .product__item--new {
   background-image: url('../img/new.png');
   background-repeat: no-repeat;
-
- }
+}
 
 .product__photo {
   align-self: center;
@@ -875,8 +884,6 @@ img {
   margin: 0;
   padding-bottom: 68px;
 }
-
-
 
 /*-----  МОДАЛЬНЫЕ ОКНА  -----*/
 /*Карта*/
