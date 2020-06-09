@@ -109,19 +109,19 @@
             <div class="slide slide--one">
               <h3>Перфораторы</h3>
               <p>Настоящие мужские игрушки</p>
-              <button>Вперед</button>
-              <button>Назад</button>
+              <a>Вперед</a>
+              <a>Назад</a>
               <!-- Небольшая красная кнопка, которая встречается в нескольких разделах страницы small-button-->
-              <a class="small-button" href="catalog.html">Открыть каталог</a>
+              <a class="button button--small-button" href="catalog.html">Открыть каталог</a>
             </div>
 
             <div class="slide slide--two">
               <h3>Дрели</h3>
               <p>Соседям на радость!</p>
-              <button>Вперед</button>
-              <button>Назад</button>
+              <a>Вперед</a>
+              <a>Назад</a>
               <!-- Небольшая красная кнопка, которая встречается в нескольких разделах страницы small-button-->
-              <a class="small-button" href="catalog.html">Открыть каталог</a>
+              <a class="button button--small-button" href="catalog.html">Открыть каталог</a>
             </div>
           </div>
         </div>
@@ -131,7 +131,7 @@
         <div class="header-wrapper">
           <h2 class="popular">Популярные товары:</h2>
           <!-- Небольшая красная кнопка, которая встречается в нескольких разделах страницы small-button-->
-          <a class="small-button" href="#">Все популярные товары</a>
+          <a class="button button--small-button" href="#">Все популярные товары</a>
         </div>
         <div class="product">
           <article class="product__item">
@@ -165,7 +165,7 @@
         <div class="header-wrapper">
           <h2 class="popular">Популярные производители:</h2>
           <!-- Небольшая красная кнопка, которая встречается в нескольких разделах страницы small-button-->
-          <a class="small-button" href="#">Все производители</a>
+          <a class="button button--small-button" href="#">Все производители</a>
         </div>
         <a class="producer__link" href="#">
           <img class="producer__photo" src="img/bosch.jpg" width="220" height="145" alt="Логотип производителя bosch">
@@ -203,16 +203,20 @@
         </p>
         <div class="second-slider">
           <dl class="second-slider__list">
-            <dt class="second-slider__button">Доставка</dt>
-            <dd>
+            <dt class="blue-button">
+              <a href="#dos">Доставка</a>
+            </dt>
+            <dd class="about about--delivery" id="dos">
               <h3 class="second-slider__title">Доставка</h3>
               <p>
                 Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
                 Ведь мы неплохо заработаем, поднимая его на ваш этаж!
               </p>
             </dd>
-            <dt class="second-slider__button">Гарантия</dt>
-            <dd>
+            <dt class="blue-button">
+              <a href="#gr">Гарантия</a>
+            </dt>
+            <dd class="about about--guarantee" id="gr">
               <h3 class="second-slider__title">Гарантия</h3>
               <p>
                 Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного
@@ -220,13 +224,15 @@
                 Дом уж восстановите как-нибудь сами.
               </p>
             </dd>
-            <dt class="second-slider__button">Кредит</dt>
-            <dd>
+            <dt class="blue-button">
+              <a href="#kr">Кредит</a>
+            </dt>
+            <dd class="about about--credit" id="kr">
               <h3 class="second-slider__title">Кредит</h3>
               <p>
                 Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
               </p>
-              <a class="middle-button" href="#">Отправить заявку</a>
+              <a class="button button--small-button" href="#">Отправить заявку</a>
             </dd>
           </dl>
         </div>
@@ -247,7 +253,7 @@
           <li class="company__item">ЖелДорЭкспедиция</li>
         </ul>
         <!-- Небольшая красная кнопка, которая встречается в нескольких разделах страницы small-button-->
-        <a class="small-button" href="#">Подробнее о компании</a>
+        <a class="button button--middle-button" href="#">Подробнее о компании</a>
       </section>
 
       <section class="contacts">
@@ -257,7 +263,7 @@
           <img class="contacts__image" src="img/map.png" width="300" height="158" alt="Карта">
         </a>
         <!-- Самая большая красная кнопка на странице. Встречается один раз -->
-        <a class="big-button">Заблудились? Напишите нам!</a>
+        <a class="button button--big-button">Заблудились? Напишите нам!</a>
       </section>
     </div>
   </main>

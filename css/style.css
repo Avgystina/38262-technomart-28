@@ -79,9 +79,19 @@
   --add-moreblue: #32425C;
   --add-moreblackblue: #1D2739;
   --add-lightpink: #F9F5F0;
+  --add-greypink: #F7F3EC;
   --add-transparent: hsla(0, 0%, 100%, 0.3);
   --add-lightgrey: #EAEAEA;
   --add-grey: #A9A9A9;
+  --add-greyblue: #F2F6F8;
+  --add-newgrey: #E5E5E5;
+  /*добавляем прозрачность светло-серому C5C5C5*/
+  --add-transparent2: rgba(197, 197, 197, 0.3);
+  /*добавляем прозрачность серому A9A9A9*/
+  --add-transparent3: rgba(169, 169, 169, 0.3);
+  /*текст в кнопке оформить заказ при клике*/
+  --add-transparent4: rgba(255, 255, 255, 0.5);
+
 }
 
 body {
@@ -112,8 +122,24 @@ img {
   padding-right: 10px;
 }
 
+.button {
+  font-family: 'Cuprum', 'Arial Narrow', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--basic-red);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.button:active {
+  background-color: var(--error);
+}
+
+/*-----  ШАПКА САЙТА  -----*/
 .main-header {
-  font-family: 'Cuprum', 'Helvetica', sans-serif;
+  font-family: 'Cuprum', 'Arial Narrow', sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: var(--white);
@@ -145,13 +171,20 @@ img {
 }
 
 .top-panel__buy {
+  align-self: flex-start;
   width: 150px;
   background-color: var(--basic-green);
   text-align: center;
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
 
 .top-panel__buy:hover {
   background-color: var(--luck);
+}
+
+.top-panel__buy:active {
+  color: var(--add-transparent4);
 }
 
 .container--magazine {
@@ -244,6 +277,7 @@ img {
   color: var(--add-moreblue);
 }
 
+/*-----  МЕНЮ САЙТА  -----*/
 .main-menu {
   background-color: var(--add-moreblue);
   border-bottom: 5px solid var(--add-blackblue);
@@ -280,6 +314,7 @@ img {
   padding-right: 24px;
 }
 
+/*-----  ПРОМО-БЛОК СО СЛАЙДЕРОМ  -----*/
 .promo {
   display: grid;
   grid-template-columns: 300px 300px 300px;
@@ -300,7 +335,7 @@ img {
   flex-direction: column;
   align-items: flex-start;
   background-repeat: no-repeat;
-  font-family: 'Cuprum', 'Helvetica', sans-serif;
+  font-family: 'Cuprum', 'Arial Narrow', sans-serif;
   color: var(--white);
 }
 
@@ -354,9 +389,16 @@ img {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: var(--add-transparent);
-  //margin-top: 14px;
   margin-bottom: 21px;
   margin-left: 20px;
+}
+
+.card__link:hover {
+  background-color: var(--add-transparent2);
+}
+
+.card__link:active {
+  background-color: var(--add-transparent3);
 }
 
 .promo__slider {
@@ -392,6 +434,7 @@ img {
   display: block;
 }
 
+/*-----  ПОПУЛЯРНЫЕ ТОВАРЫ  -----*/
 .products {
   margin-top: 59px;
 }
@@ -406,27 +449,19 @@ img {
 }
 
 .popular {
-  font-family: 'Cuprum', 'Helvetica', sans-serif;
+  font-family: 'Cuprum', 'Arial Narrow', sans-serif;
   font-size: 30px;
   text-transform: uppercase;
   color: var(--darkblue);
 }
 
-.small-button {
-  font-family: 'Cuprum', 'Helvetica', sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  background-color: var(--basic-red);
-  text-transform: uppercase;
-  color: var(--white);
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+.button--small-button {
+  width: 192px;
 }
 
 .product {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -439,7 +474,14 @@ img {
   height: 318px;
   border: 1px solid var(--add-lightgrey);
   text-align: center;
+  margin-bottom: 20px;
 }
+
+.product__item--new {
+  background-image: url('../img/new.png');
+  background-repeat: no-repeat;
+
+ }
 
 .product__photo {
   align-self: center;
@@ -472,6 +514,7 @@ img {
   margin-bottom: 21px;
 }
 
+/*-----  ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ  -----*/
 .producer {
   margin-top: 70px;
   margin-bottom: 70px;
@@ -484,7 +527,7 @@ img {
   margin-bottom: 20px;
 }
 
-/*Блок сервисы*/
+/*-----  СЕРВИСЫ  -----*/
 .services {
   background-color: var(--basic-background);
 }
@@ -494,7 +537,7 @@ img {
 }
 
 .black-titles {
-  font-family: 'Cuprum', 'Helvetica', sans-serif;
+  font-family: 'Cuprum', 'Arial Narrow', sans-serif;
   font-size: 30px;
   text-transform: uppercase;
   color: var(--black);
@@ -506,6 +549,7 @@ img {
   padding-bottom: 21px;
 }
 
+/*-----  ВТОРОЙ СЛАЙДЕР САЙТА  -----*/
 .second-slider__list {
   display: grid;
   grid-column-gap: 80px;
@@ -513,19 +557,25 @@ img {
   padding-bottom: 54px;
 }
 
-.second-slider__list dd {
-  /*Может стоит вынести в другой блок*/
+.about--delivery {
+  //display: none;
   background-image: url('../img/car.png');
-  /*
-  background-image: url('../img/credit.png');
-  background-image: url('../img/medal.png');
-  */
 }
 
-.second-slider__button {
+.about--guarantee {
+  display: none;
+  background-image: url('../img/medal.png');
+}
+
+.about--credit {
+  display: none;
+  background-image: url('../img/credit.png');
+}
+
+.blue-button {
   width: 240px;
   height: 40px;
-  font-family: 'Cuprum', 'Helvetica', sans-serif;
+  font-family: 'Cuprum', 'Arial Narrow', sans-serif;
   font-weight: bold;
   font-size: 21px;
   background-color: var(--add-moreblue);
@@ -535,14 +585,24 @@ img {
   padding-left: 22px;
 }
 
+.blue-button:hover {
+  background-color: var(--add-blackblue);
+}
+
+.blue-button:active {
+  color: var(--add-moreblue);
+  background-color: var(--white);
+}
+
 .second-slider__title {
-  font-family: 'Cuprum', 'Helvetica', sans-serif;
+  font-family: 'Cuprum', 'Arial Narrow', sans-serif;
   font-size: 36px;
   text-transform: uppercase;
   color: var(--add-moreblue);
   margin-top: 0;
 }
 
+/*-----  О КОМПАНИИ  -----*/
 .container--company {
   display: flex;
   justify-content: space-between;
@@ -552,21 +612,34 @@ img {
 
 .company {
   width: 478px;
+  display: flex;
+  flex-direction: column;
 }
 
 .company__item {
-  font-family: 'Cuprum', 'Helvetica', sans-serif;
+  font-family: 'Cuprum', 'Arial Narrow', sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: var(--black);
 }
 
-.contacts {
-  width: 311px;
+.button--middle-button {
+  width: 220px;
 }
 
+/*-----  КОНТАКТЫ  -----*/
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.button--big-button {
+  width: 300px;
+}
+
+/*-----  ПОДВАЛ САЙТА  -----*/
 .main-footer {
-  font-family: 'Cuprum', 'Helvetica', sans-serif;
+  font-family: 'Cuprum', 'Arial Narrow', sans-serif;
   font-size: 18px;
   color: var(--white);
 }
@@ -582,6 +655,7 @@ img {
   align-items: flex-start;
 }
 
+/*-----  МЕНЮ В ПОДВАЛЕ САЙТА  -----*/
 .menu {
   display: flex;
   justify-content: flex-end;
@@ -665,15 +739,146 @@ img {
   color: var(--special-yellowlight);
 }
 
+.orange-link:hover {
+  text-decoration: underline;
+}
+
+.orange-link:active {
+  color: var(--basic-red);
+}
+
 .who-do {
   width: 98px;
 }
 
-/*Оформление второй страницы
-  .description {
-    background-color: var(--basic-background);
-  }*/
-/*------------------Оформление модальных окон----------------*/
+/*-----  ОФОРМЛЕНИЕ СТРАНИЦЫ КАТАЛОГ  -----*/
+.bread-crumbs {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.bread-crumbs__link {
+  color: var(--black);
+  margin-left: 15px;
+  margin-right: 17px;
+}
+
+.popular--catalog {
+  width: 100%;
+  background-color: var(--add-greyblue);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 29px;
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.left-column {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.filtr {
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+  margin-bottom: 14px;
+  background-color: var(--add-greypink);
+}
+
+.form-data {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.form-data__fieldset {
+  border: none;
+  margin-top: 16px;
+  margin-bottom: 18px;
+  padding-top: 18px;
+  padding-bottom: 27px;
+}
+
+.form-data__fieldset--border {
+  border-top: 1px solid var(--add-transparent2);
+  border-bottom: 1px solid var(--add-transparent2);
+}
+
+.form-data__title {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.right-column {
+  width: 700px;
+}
+
+.sort {
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 28px;
+  padding-left: 19px;
+  background-color: var(--add-greypink);
+}
+
+.pages {
+  margin-top: 48px;
+  margin-bottom: 60px;
+}
+
+.pages__link {
+  text-transform: uppercase;
+  color: var(--black);
+  border: 1px solid var(--basic-greylight);
+  border-radius: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 10px;
+}
+
+.pages__link:hover {
+  border-color: var(--add-newgrey);
+}
+
+.pages__link:active {
+  border-color: var(--basic-red);
+}
+
+.pages__link--active {
+  color: var(--white);
+  background-color: var(--basic-red);
+}
+
+.description {
+  background-color: var(--basic-background);
+}
+
+.black-titles--indent {
+  padding-top: 64px;
+  margin-bottom: 24px;
+}
+
+.description__paragraph {
+  margin: 0;
+  padding-bottom: 68px;
+}
+
+
+
+/*-----  МОДАЛЬНЫЕ ОКНА  -----*/
 /*Карта*/
 .map-popup {
   display: none;
