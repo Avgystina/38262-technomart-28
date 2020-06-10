@@ -80,17 +80,21 @@
   --add-moreblackblue: #1D2739;
   --add-lightpink: #F9F5F0;
   --add-greypink: #F7F3EC;
-  --add-transparent: hsla(0, 0%, 100%, 0.3);
   --add-lightgrey: #EAEAEA;
   --add-grey: #A9A9A9;
   --add-greyblue: #F2F6F8;
   --add-newgrey: #E5E5E5;
+  --add-darkgreen: #367315;
+  --add-newgreen: #518534;
+  --add-transparent: hsla(0, 0%, 100%, 0.3);
   /*добавляем прозрачность светло-серому C5C5C5*/
   --add-transparent2: rgba(197, 197, 197, 0.3);
   /*добавляем прозрачность серому A9A9A9*/
   --add-transparent3: rgba(169, 169, 169, 0.3);
   /*текст в кнопке оформить заказ при клике*/
   --add-transparent4: rgba(255, 255, 255, 0.5);
+  /*тень при наведении на карточку товара*/
+  --add-transparent5: rgba(0, 0, 0, 0.15);
 }
 
 body {
@@ -480,37 +484,112 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 185px;
+  position: relative;
+  width: 220px;
   height: 318px;
   border: 1px solid var(--add-lightgrey);
   text-align: center;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
-.product__item--new {
+.product__item:hover {
+  box-shadow: 0px 4px 20px var(--add-transparent5);
+}
+
+.product__item:hover .hidden-buttons {
+  display: flex;
+}
+
+.product__item--new::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  right: -1px;
+  width: 70px;
+  height: 70px;
   background-image: url('../img/new.png');
   background-repeat: no-repeat;
 }
 
+.hidden-buttons {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 210px;
+  height: 92px;
+  background-color: var(--white);
+  margin-top: 16px;
+}
+
+.hidden-buttons__link {
+  font-family: 'Cuprum', 'Arial Narrow', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 2px;
+}
+
+.hidden-buttons__link--buy {
+  width: 135px;
+  background-color: var(--basic-green);
+  margin-top: 20px;
+  box-shadow: inset 0px -3px 0px var(--add-darkgreen);
+}
+
+.hidden-buttons__link--buy:hover {
+  background-color: var(--luck);
+}
+
+.hidden-buttons__link--buy:active {
+  background-color: var(--add-newgreen);
+}
+
+.hidden-buttons__link--bookmarks {
+  width: 129px;
+  color: var(--add-moreblue);
+  background-color: var(--white);
+  border: 3px solid var(--basic-green);
+  margin-top: 10px;
+}
+
+.hidden-buttons__link--bookmarks:hover {
+  border-color: var(--add-moreblue);
+}
+
+.hidden-buttons__link--bookmarks:active {
+  opacity: 0.5;
+}
+
 .product__photo {
-  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .product__name {
+  width: 185px;
   font-size: 18px;
-  font-weight: bold;
+  margin-top: 38px;
+  margin-bottom: 7px;
+  padding-left: 18px;
+  padding-right: 17px;
 }
 
 .product__price {
   font-size: 17px;
-  font-weight: bold;
   text-transform: uppercase;
 }
 
 .product__price--old {
   color: var(--add-grey);
-  padding-top: 7px;
-  padding-bottom: 13px;
+  min-height: 20px;
 }
 
 .product__price--new {
@@ -518,9 +597,10 @@ img {
   align-self: center;
   background-color: var(--basic-red);
   color: var(--white);
+  margin-top: 14px;
+  margin-bottom: 21px;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-bottom: 21px;
 }
 
 /*-----  ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ  -----*/
@@ -534,6 +614,15 @@ img {
 
 .producer__link {
   margin-bottom: 20px;
+}
+
+.producer__link:hover {
+  height: 141px;
+  box-shadow: 0px 4px 20px var(--add-transparent5);
+}
+
+.producer__link:active {
+  opacity: 0.5;
 }
 
 /*-----  СЕРВИСЫ  -----*/
@@ -891,10 +980,12 @@ img {
   display: none;
   width: 943px;
   height: 449px;
-  /*какой вставлять background-color?*/
-  /*какую вырезать карту?*/
-  background-image: url('../img/map-popup.png');
-  border-top: 7px solid #var(--basic-red);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.map-popup iframe {
+  border: none;
 }
 
 /*Форма обратной связи*/
