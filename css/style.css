@@ -161,19 +161,18 @@ img {
 }
 
 .top-panel {
+  width: 100%;
   background-color: var(--add-blackblue);
-  height: 42px;
+  height: 43px;
 }
 
 .container--top-panel {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .logo {
   width: 220px;
-  padding-top: 12px;
+  padding-top: 13px;
   padding-bottom: 5px;
   text-align: center;
   background-color: var(--basic-red);
@@ -184,13 +183,75 @@ img {
   background-color: var(--error);
 }
 
+.top-panel__form::before {
+  content: '';
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  top: 13px;
+  left: -24px;
+  background-image: url('../img/icon-search.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.top-panel__form {
+  position: relative;
+  margin-left: 41px;
+  margin-right: 111px;
+  padding-top: 11px;
+}
+
+.top-panel__form input {
+  background-color: inherit;
+  border: inherit;
+}
+
+.top-panel__bookmarks::before {
+  content: ' ';
+  width: 14px;
+  height: 16px;
+  position: absolute;
+  top: 14px;
+  left: -23px;
+  background-image: url('../img/icon-bookmark.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.top-panel__bookmarks {
+  position: relative;
+  padding-top: 11px;
+}
+
+.top-panel__basket::before {
+  content: ' ';
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 14px;
+  left: -22px;
+  background-image: url('../img/icon-cart.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.top-panel__basket {
+  position: relative;
+  margin-left: 73px;
+  margin-right: 28px;
+  padding-top: 11px;
+}
+
 .top-panel__buy {
-  align-self: flex-start;
-  width: 150px;
   background-color: var(--basic-green);
   text-align: center;
-  padding-top: 9px;
-  padding-bottom: 9px;
+  padding-top: 11px;
+  padding-left: 18px;
+  align-items: stretch;
 }
 
 .top-panel__buy:hover {
@@ -217,7 +278,7 @@ img {
   font-size: 16px;
   line-height: 23px;
   color: var(--basic-red);
-  margin-top: 37px;
+  margin-top: 45px;
   margin-bottom: 44px;
   margin-left: 30px;
 }
@@ -467,6 +528,7 @@ img {
   font-size: 30px;
   text-transform: uppercase;
   color: var(--darkblue);
+  padding-left: 28px;
 }
 
 .button--small-button {
@@ -504,7 +566,7 @@ img {
 .product__item--new::before {
   content: "";
   position: absolute;
-  z-index: 1;
+  z-index: 5;
   top: -1px;
   right: -1px;
   width: 70px;
@@ -594,13 +656,14 @@ img {
 
 .product__price--new {
   width: 141px;
-  align-self: center;
-  background-color: var(--basic-red);
+  height: 38px;
+  background-image: url('../img/red-button.svg');
+  background-repeat: no-repeat;
   color: var(--white);
+  padding-top: 5px;
   margin-top: 14px;
   margin-bottom: 21px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  align-self: center;
 }
 
 /*-----  ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ  -----*/
