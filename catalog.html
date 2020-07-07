@@ -124,9 +124,29 @@
         <div class="filtr-column">
           <div class="filtr">Фильтр:</div>
 
-          <!-- Чуть позже сверстаю сам фильтр -->
-
           <form class="form-data" action="https://echo.htmlacademy.ru" method="get">
+            <fieldset class="form-data__fieldset">
+              <legend class="form-data__title">Цена:</legend>
+              <div class="form-data__filtr">
+                <div class="form-data__range-controls">
+                  <div class="form-data__scale">
+                    <div class="form-data__bar"></div>
+                  </div>
+                  <div class="form-data__toggle form-data__toggle--min" tabindex="0"></div>
+                  <div class="form-data__toggle form-data__toggle--max" tabindex="0"></div>
+                </div>
+                <div class="form-data__price-controls">
+                  <label class="form-data__price form-data__price--min">
+                    <input class="form-data__input form-data__input--min" type="number" name="min-price" value="0">
+                  </label>
+                  <span class="form-data__dash">&mdash;</span>
+                  <label class="form-data__price form-data__price--max">
+                    <input class="form-data__input form-data__input--max" type="number" name="max-price" value="30000">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+
             <fieldset class="form-data__fieldset form-data__fieldset--border">
               <legend class="form-data__title">Производители:</legend>
               <input type="checkbox" name="bosch" id="filter-bosch" checked>

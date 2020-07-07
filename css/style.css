@@ -91,6 +91,9 @@
   --add-red: #CA2C37;
   --add-greylight: #F1F1F1;
   --add-moregreylight: #F4F4F4;
+  --add-othergrey: #D7DCDE;
+  --add-othergreyab: #ABABAB;
+  --add-othergreen: #00CA74;
   /*добавляем прозрачность белому*/
   --add-transparent: rgba(255, 255, 255, 0.3);
   /*добавляем прозрачность светло-серому C5C5C5*/
@@ -1166,6 +1169,7 @@ img {
   padding-left: 18px;
   margin-bottom: 14px;
   background-color: var(--add-greypink);
+  border-radius: 2px;
 }
 
 .form-data {
@@ -1176,6 +1180,8 @@ img {
 }
 
 .form-data__fieldset {
+  margin: 0;
+  padding: 0;
   border: none;
   margin-top: 16px;
   margin-bottom: 18px;
@@ -1193,6 +1199,89 @@ img {
   font-weight: bold;
 }
 
+.form-data__filtr {
+  width: 220px;
+}
+
+.form-data__range-controls {
+  position: relative;
+  height: 41px;
+  background-color: var(--add-greypink);
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.form-data__scale {
+  height: 2px;
+  background-color: var(--add-othergrey);
+}
+
+.form-data__bar {
+  width: 70%;
+  height: 2px;
+  background-color: var(--add-othergreen);
+}
+
+.form-data__toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  padding: 0;
+  width: 4px;
+  height: 4px;
+  border: 8px solid var(--white);
+  background-color: var(--add-othergreyab);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.form-data__toggle--min {
+  left: 18px;
+}
+
+.form-data__toggle--max {
+  left: 145px;
+}
+
+.form-data__price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-data__price {
+  font-size: 17px;
+}
+
+.form-data__input {
+  width: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+  background-color: var(--add-greypink);
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.form-data__input--min {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.form-data__dash {
+  align-self: center;
+}
+
+.form-data__input--max {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
 .catalog-column {
   width: 700px;
 }
@@ -1207,6 +1296,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 28px;
+  border-radius: 2px;
 }
 
 .sort-panel__item {
