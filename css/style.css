@@ -1060,6 +1060,24 @@ img {
   background-color: var(--basic-red);
 }
 
+.social-networks__link--vk {
+  background-image: url('../img/icon-vk.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-networks__link--fb {
+  background-image: url('../img/icon-fb.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-networks__link--inst {
+  background-image: url('../img/icon-insta.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .write-htmlacademy {
   width: 137px;
 }
@@ -1306,24 +1324,41 @@ img {
 .modal--map {
   display: none;
   width: 943px;
-  height: 449px;
-  background-image: url('../img/map-popup.png');
+  min-height: 449px;
+}
+
+.modal__iframe {
+  position: relative;
+  z-index: 2;
+  border: none;
+}
+
+.modal__wrapper {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .modal__close-button {
-  margin-left: 588px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 21px;
+  height: 21px;
+  background-color: var(--add-transparent);
+  background-image: url('../img/icon-close.svg');
+  background-repeat: no-repeat;
+  background-position: center;
   border: none;
-  background-color: inherit;
-  margin-top: 14px;
-  margin-bottom: 4px;
+  cursor: pointer;
+  z-index: 3;
 }
 
 .modal__close-button--map {
-  margin-left: 900px;
-}
-
-.modal--map iframe {
-  border: none;
+  top: 10px;
+  right: 10px;
 }
 
 /*Форма обратной связи*/
@@ -1338,6 +1373,7 @@ img {
   justify-content: space-between;
   padding-left: 80px;
   padding-right: 80px;
+  margin-top: 39px;
 }
 
 .modal__username {
@@ -1408,9 +1444,15 @@ img {
   margin-right: 80px;
 }
 
+.modal__close-button--write-us {
+  top: 14px;
+  right: 11px;
+}
+
 /*Корзина*/
 .modal--basket-window {
   display: none;
+  width: 620px;
 }
 
 .modal__paragraph {
@@ -1475,4 +1517,13 @@ img {
 
 .modal__button--grey:active {
   background-color: var(--add-grey);
+}
+
+.modal__close-button--basket-window {
+  top: 11px;
+  right: 11px;
+}
+
+.modal--active {
+  display: block;
 }
