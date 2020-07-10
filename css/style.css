@@ -297,7 +297,7 @@ img {
 
 /* с таким значением падинга все совпадает с pp
 .top-panel__link--basket {
-  padding-right: 27px;
+  padding-right: 29px;
 }*/
 .top-panel__link--basket:hover::before {
   opacity: 1;
@@ -309,8 +309,8 @@ img {
 
 .top-panel__link--buy {
   background-color: var(--basic-green);
-  padding-left: 20px;
-  padding-right: 15px;
+  padding-left: 17px;
+  padding-right: 17px;
 }
 
 .top-panel__link--buy:hover {
@@ -484,10 +484,12 @@ img {
 .main-menu__link {
   /* увеличиваю область клика */
   display: block;
-  padding-top: 16px;
-  padding-bottom: 15px;
+  padding-top: 17px;
+  padding-bottom: 14px;
 }
 
+/*Не стала падинги делать ссылкам, так как по PP начинает все плясать сильно и
+не выравнивается никак*/
 .main-menu__item:first-child {
   padding-left: 24px;
 }
