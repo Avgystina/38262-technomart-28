@@ -209,41 +209,56 @@ img {
   background-color: var(--error);
 }
 
-.top-panel__link-form {
-  padding-top: 10px;
-  padding-left: 20px;
-  padding-bottom: 8px;
+.top-panel__form {
+  position: relative;
   flex-grow: 1;
 }
 
-.icon-search {
-  opacity: 0.3;
-}
-
-.top-panel__link-form:hover .icon-search {
-  opacity: 1;
-}
-
-.top-panel__link-form:active .icon-search {
-  opacity: 0.3;
-}
-
-.top-panel__link-form:active .top-panel__search::placeholder {
-  color: var(--add-transparent4);
-}
-
 .top-panel__search {
+  width: 100%;
+  padding-top: 12px;
+  padding-left: 42px;
+  padding-bottom: 10px;
+  border: none;
+  outline: none;
   background-color: inherit;
-  border: inherit;
-}
-
-/*!!!-------------------------Не работает по фокусу!!!*/
-.top-panel__search:focus .icon-search {
-  fill: var(--basic-red);
+  color: var(--white);
 }
 
 .top-panel__search::placeholder {
   color: var(--white);
+}
+
+.top-panel__search:focus {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.top-panel__button-search {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 12px;
+  padding-right: 8px;
+  padding-bottom: 9px;
+  padding-left: 17px;
+  background-color: inherit;
+  border: none;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.top-panel__button-search:hover {
+  opacity: 1;
+}
+
+.top-panel__button-search:focus {
+  outline: none;
+}
+
+.top-panel__button-search:focus path,
+.top-panel__search:focus + .top-panel__button-search path {
+  fill: var(--basic-red);
 }
 
 .top-panel__link {
@@ -277,6 +292,10 @@ img {
   opacity: 1;
 }
 
+.top-panel__link--bookmarks:active::before {
+  opacity: 0.3;
+}
+
 .top-panel__link:active {
   background-color: var(--add-newblackblue);
   color: var(--add-transparent4);
@@ -301,6 +320,10 @@ img {
 }*/
 .top-panel__link--basket:hover::before {
   opacity: 1;
+}
+
+.top-panel__link--basket:active::before {
+  opacity: 0.3;
 }
 
 .top-panel__link--basket-full {
@@ -668,11 +691,9 @@ img {
   width: 940px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: var(--add-lightpink);
   margin-bottom: 20px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 28px;
 }
 
 .popular {
@@ -682,6 +703,9 @@ img {
   font-size: 30px;
   text-transform: uppercase;
   color: var(--darkblue);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 28px;
 }
 
 .button--small-button {
@@ -700,9 +724,6 @@ img {
 }
 
 .product__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   position: relative;
   border: 1px solid var(--add-lightgrey);
   text-align: center;
