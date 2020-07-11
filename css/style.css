@@ -257,7 +257,7 @@ img {
 }
 
 .top-panel__button-search:focus path,
-.top-panel__search:focus + .top-panel__button-search path {
+.top-panel__search:focus+.top-panel__button-search path {
   fill: var(--basic-red);
 }
 
@@ -359,7 +359,6 @@ img {
   margin: 0;
   margin-top: 42px;
   margin-left: 30px;
-  margin-right: 80px;
   width: 200px;
   font-style: italic;
   font-size: 16px;
@@ -369,7 +368,13 @@ img {
 
 .block-contacts {
   margin-top: 53px;
-  margin-right: 57px;
+  margin-left: 80px;
+  margin-right: 60px;
+}
+
+.block-contacts--catalog {
+  margin-left: 90px;
+  margin-right: 50px;
 }
 
 .block-contacts__phone {
@@ -440,11 +445,12 @@ img {
 .user-block {
   width: 299px;
   text-align: center;
+  margin-top: 55px;
 }
 
-.button-header--link-profile {
-  padding-left: 56px;
-  padding-right: 6px;
+.button-header--link-profile svg {
+  margin-top: 3px;
+  padding-left: 15px;
 }
 
 .button-header--link-profile:hover .icons-user {
@@ -455,6 +461,15 @@ img {
   fill: var(--basic-greylight);
 }
 
+.user-block__text {
+  padding-left: 16px;
+  padding-right: 14px;
+}
+
+.button-header--logout {
+  padding-right: 14px;
+}
+
 .button-header--logout:hover .icons-user {
   fill: var(--basic-grey);
 }
@@ -463,19 +478,34 @@ img {
   fill: var(--basic-greylight);
 }
 
+.user-block__buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 11px;
+}
+
 .user-block__orders {
   font-size: 16px;
   color: var(--add-moreblue);
 }
 
 .user-block__orders:hover,
+.user-block__dot:hover,
 .user-block__private-office:hover {
   color: var(--basic-red);
 }
 
 .user-block__orders:active,
+.user-block__dot:active,
 .user-block__private-office:active {
   color: var(--basic-greylight);
+}
+
+.user-block__dot {
+  margin-left: 12px;
+  margin-right: 12px;
+  font-size: 30px;
+  color: var(--add-moreblue);
 }
 
 .user-block__private-office {
