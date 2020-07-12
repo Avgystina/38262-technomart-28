@@ -970,6 +970,7 @@ img {
 
 .container--services {
   padding-top: 43px;
+  padding-bottom: 51px;
 }
 
 .black-titles {
@@ -995,13 +996,22 @@ img {
 }
 
 .second-slider__buttons {
-  width: 240px;
   list-style: none;
   margin: 0;
   padding: 0;
+  position: relative;
+}
+
+.second-slider__buttons::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 279px;
   background-image: url('../img/shadow-background.png');
   background-repeat: no-repeat;
-  background-position: center 230px;
+  background-position: 0 0;
 }
 
 .second-slider__link-button {
@@ -1031,29 +1041,14 @@ img {
 }
 
 .second-slider__list {
-  width: 619px;
+  max-width: 619px;
+  position: relative;
 }
 
 .second-slider__slide {
   display: none;
-}
-
-.second-slider__slide--car {
-  background-image: url('../img/car.png');
-  background-repeat: no-repeat;
-  background-position: top right;
-}
-
-.second-slider__slide--medal {
-  background-image: url('../img/medal.png');
-  background-repeat: no-repeat;
-  background-position: top right;
-}
-
-.second-slider__slide--credit {
-  background-image: url('../img/credit.png');
-  background-repeat: no-repeat;
-  background-position: top right;
+  min-width: 619px;
+  min-height: 233px;
 }
 
 .second-slider__slide--active {
@@ -1071,11 +1066,50 @@ img {
 }
 
 .second-slider__description {
-  width: 275px;
   margin: 0;
-  margin-top: 30px;
-  padding-bottom: 112px;
 }
+
+.second-slider__description--car {
+  width: 275px;
+  margin-top: 35px;
+}
+
+.second-slider__description--medal {
+  width: 315px;
+  margin-top: 29px;
+}
+
+.second-slider__description--credit {
+  width: 280px;
+  margin-top: 33px;
+  margin-bottom: 34px;
+}
+
+.second-slider__image--car {
+  position: absolute;
+  top: 19px;
+  right: 1px;
+}
+
+.second-slider__image--medal {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+}
+
+.second-slider__image--credit {
+  position: absolute;
+  top: -3px;
+  right: -10px;
+}
+
+.button--credit {
+  border-radius: 3px;
+  padding-left: 45px;
+  padding-right: 44px;
+  padding-bottom: 10px;
+}
+
 
 /*-----  О КОМПАНИИ  -----*/
 .container--company {
