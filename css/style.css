@@ -151,6 +151,7 @@ img {
 .button {
   font-family: 'Cuprum', 'Arial Narrow', sans-serif;
   font-size: 14px;
+  line-height: 18px;
   text-transform: uppercase;
   color: var(--white);
   background-color: var(--basic-red);
@@ -645,29 +646,10 @@ img {
   background-color: var(--add-transparent3);
 }
 
-.toggle {
-  content: '';
-  width: 30px;
-  height: 10px;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  z-index: 2;
-}
-
 .slides {
   grid-row: 2/4;
   grid-column: 1/3;
   position: relative;
-}
-
-/*На всякий случай. Вдруг JS заглючит*/
-#button_1:checked~.slides .slide:nth-child(1) {
-  display: block;
-}
-
-#button_2:checked~.slides .slide:nth-child(2) {
-  display: block;
 }
 
 .slide {
@@ -677,6 +659,10 @@ img {
   background-repeat: no-repeat;
   font-family: 'Cuprum', 'Arial Narrow', sans-serif;
   color: var(--white);
+}
+
+.slide--active {
+  display: block;
 }
 
 /*Первый слайд*/
@@ -698,13 +684,60 @@ img {
   font-size: 18px;
   padding-left: 24px;
   margin-top: 13px;
-  margin-bottom: 113px;
+  margin-bottom: 120px;
+}
+
+.slide__button {
+  position: absolute;
+  top: 122px;
+  width: 22px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.slide__button--back {
+  background-image: url('../img/icon-left.svg');
+  left: 24px;
+}
+
+.slide__button--forward {
+  background-image: url('../img/icon-right.svg');
+  right: 20px;
 }
 
 .button--slide-button {
   padding-left: 46px;
   padding-right: 46px;
   margin-left: 24px;
+}
+
+.buttons-controls {
+  display: flex;
+  position: absolute;
+  bottom: 36px;
+  left: 295px;
+  width: 30px;
+}
+
+.button-controls {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  border: none;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  background-color: var(--white);
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.button-controls:last-child {
+  margin-right: 0;
+}
+
+.button-controls--active {
+  background-color: var(--basic-red);
 }
 
 /*Второй слайд*/
@@ -714,16 +747,16 @@ img {
 
 /*-----  ПОПУЛЯРНЫЕ ТОВАРЫ  -----*/
 .products {
-  margin-top: 40px;
+  margin-top: 59px;
 }
 
 .header-wrapper {
-  width: 940px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background-color: var(--add-lightpink);
   margin-bottom: 20px;
+  padding-left: 28px;
+  padding-right: 14px;
 }
 
 .popular {
@@ -733,14 +766,14 @@ img {
   font-size: 30px;
   text-transform: uppercase;
   color: var(--darkblue);
-  padding-top: 32px;
+  padding-top: 33px;
   padding-bottom: 32px;
-  padding-left: 28px;
 }
 
 .button--small-button {
   min-width: 192px;
-  margin-right: 15px;
+  align-self: flex-start;
+  margin-top: 25px;
 }
 
 .product {
@@ -754,6 +787,8 @@ img {
 }
 
 .product__item {
+  display: flex;
+  flex-direction: column;
   position: relative;
   border: 1px solid var(--add-lightgrey);
   text-align: center;
@@ -772,8 +807,8 @@ img {
   content: "";
   position: absolute;
   z-index: 3;
-  top: -1px;
-  right: -1px;
+  top: 0;
+  right: 0;
   width: 70px;
   height: 70px;
   background-image: url('../img/new.png');
@@ -840,51 +875,73 @@ img {
 }
 
 .product__photo {
-  margin-left: auto;
-  margin-right: auto;
   overflow: hidden;
   max-width: 100%;
-  padding-top: 6px;
-  padding-left: 18px;
-  padding-right: 18px;
+}
+
+.product__photo--bosch9000 {
+  margin-top: 5px;
+  margin-left: 17px;
+}
+
+.product__photo--bosch3000 {
+  margin-top: 2px;
+  margin-left: 11px;
+}
+
+.product__photo--bosch6000 {
+  margin-top: 3px;
+  margin-left: 12px;
+}
+
+.product__photo--bosch2000 {
+  margin-top: 2px;
+  margin-left: 11px;
 }
 
 .product__name {
-  margin: 0;
-  padding: 0;
-  width: 185px;
   font-size: 18px;
-  margin-top: 8px;
-  margin-bottom: 7px;
+  line-height: 22px;
   padding-left: 18px;
+  padding-right: 18px;
+  flex-grow: 1;
+  margin-top: 9px;
+  margin-bottom: 4px;
 }
 
 .product__price {
   font-size: 17px;
+  line-height: 18px;
   text-transform: uppercase;
 }
 
 .product__price--old {
+  min-height: 24px;
   color: var(--add-grey);
-  min-height: 18px;
 }
 
 .product__price--new {
   width: 141px;
-  height: 38px;
+  min-height: 38px;
   background-image: url('../img/red-button.svg');
   background-repeat: no-repeat;
+  background-position: 0 0;
   color: var(--white);
-  padding-top: 5px;
-  margin-top: 14px;
-  margin-bottom: 21px;
-  align-self: center;
+  padding-top: 9px;
+  margin-top: 8px;
+  margin-bottom: 11px;
+  margin-left: 44px;
+
 }
 
 /*-----  ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ  -----*/
 .producer {
   margin-top: 70px;
   margin-bottom: 70px;
+}
+
+.header-wrapper--producer {
+  padding-right: 19px;
 }
 
 .producer__links {
@@ -894,7 +951,6 @@ img {
   grid-gap: 20px;
 }
 
-/*Беда с отступом при наведении!!!*/
 .producer__link:hover {
   box-shadow: 0px 4px 20px var(--add-transparent5);
 }
@@ -903,25 +959,32 @@ img {
   opacity: 0.5;
 }
 
+.producer__photo {
+  vertical-align: bottom;
+}
+
 /*-----  СЕРВИСЫ  -----*/
 .services {
   background-color: var(--basic-background);
 }
 
 .container--services {
-  padding-top: 64px;
+  padding-top: 43px;
 }
 
 .black-titles {
   font-family: 'Cuprum', 'Arial Narrow', sans-serif;
   font-size: 30px;
+  font-weight: normal;
   text-transform: uppercase;
   color: var(--black);
 }
 
 .services__paragraph {
-  width: 394px;
-  margin-top: 25px;
+  font-size: 13px;
+  line-height: 24px;
+  width: 397px;
+  margin-top: 28px;
   margin-bottom: 70px;
 }
 
@@ -938,7 +1001,7 @@ img {
   padding: 0;
   background-image: url('../img/shadow-background.png');
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position: center 230px;
 }
 
 .second-slider__link-button {
@@ -946,10 +1009,11 @@ img {
   font-family: 'Cuprum', 'Arial Narrow', sans-serif;
   font-weight: bold;
   font-size: 21px;
+  line-height: 30px;
   background-color: var(--add-moreblue);
   color: var(--white);
-  padding-top: 13px;
-  padding-bottom: 17px;
+  padding-top: 14px;
+  padding-bottom: 18px;
   padding-left: 22px;
   padding-right: 140px;
   box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
@@ -1013,7 +1077,6 @@ img {
   padding-bottom: 112px;
 }
 
-/*Допиши стили кнопки */
 /*-----  О КОМПАНИИ  -----*/
 .container--company {
   display: flex;
