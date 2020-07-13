@@ -1195,6 +1195,7 @@ img {
 .main-footer {
   font-family: 'Cuprum', 'Arial Narrow', sans-serif;
   font-size: 18px;
+  line-height: 24px;
   color: var(--white);
 }
 
@@ -1208,6 +1209,11 @@ img {
   align-content: flex-start;
 }
 
+.logo--footer {
+  padding-top: 20px;
+  padding-bottom: 13px;
+}
+
 /*-----  МЕНЮ В ПОДВАЛЕ САЙТА  -----*/
 .menu {
   display: flex;
@@ -1215,17 +1221,20 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
-  flex-grow: 1;
 }
 
 .menu--top {
-  width: 545px;
-  padding-top: 27px;
-  padding-left: 173px;
+  padding-top: 37px;
+  padding-left: 174px;
+  flex-grow: 1;
 }
 
 .menu__item {
-  flex-grow: 1;
+  margin-right: 58px;
+}
+
+.menu__item:last-child {
+  margin-right: 0;
 }
 
 .menu__link--color {
@@ -1241,37 +1250,42 @@ img {
   text-decoration: none;
 }
 
-.menu--bottom {
-  width: 525px;
-  margin-top: 34px;
-  padding-left: 92px;
-}
-
 .footer-top__contacts {
   margin: 0;
   color: var(--basic-background);
-  margin-top: 22px;
-  margin-bottom: 34px;
+  margin-top: 23px;
+  margin-bottom: 54px;
+}
+
+.menu--bottom {
+  margin-top: 28px;
+  padding-left: 96px;
 }
 
 .footer-bottom {
   background-color: var(--add-blackblue);
   font-size: 16px;
+  line-height: 18px;
 }
 
 .container--footer-bottom {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 36px;
+  padding-bottom: 35px;
 }
 
 .copyright {
+  margin: 0;
   width: 227px;
 }
 
 .social-networks {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 97px;
+  margin-right: 55px;
 }
 
 .social-networks__link {
@@ -1282,7 +1296,7 @@ img {
   height: 44px;
   background-color: var(--add-bluegrey);
   border-radius: 50%;
-  margin-right: 2px;
+  margin-right: 1px;
 }
 
 .social-networks__link:last-child {
@@ -1300,22 +1314,23 @@ img {
 .social-networks__link--vk {
   background-image: url('../img/icon-vk.svg');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 9px 12px;
 }
 
 .social-networks__link--fb {
   background-image: url('../img/icon-fb.svg');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 17px 9px;
 }
 
 .social-networks__link--inst {
   background-image: url('../img/icon-insta.svg');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 12px 9px;
 }
 
 .write-htmlacademy {
+  margin: 0;
   width: 137px;
 }
 
@@ -1332,6 +1347,7 @@ img {
 }
 
 .who-do {
+  margin: 0;
   width: 98px;
 }
 
