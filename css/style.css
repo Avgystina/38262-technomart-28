@@ -329,11 +329,12 @@ img {
 
 .top-panel__link--basket-full {
   background-color: var(--basic-red);
+  padding-right: 22px;
 }
 
 .top-panel__link--buy {
   background-color: var(--basic-green);
-  padding-left: 17px;
+  padding-left: 18px;
   padding-right: 17px;
 }
 
@@ -523,11 +524,10 @@ img {
 .main-menu__list {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content: space-between;
   list-style: none;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .main-menu__item {
@@ -931,7 +931,6 @@ img {
   margin-top: 8px;
   margin-bottom: 11px;
   margin-left: 44px;
-
 }
 
 /*-----  ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ  -----*/
@@ -1110,7 +1109,6 @@ img {
   padding-bottom: 10px;
 }
 
-
 /*-----  О КОМПАНИИ  -----*/
 .container--company {
   display: flex;
@@ -1254,12 +1252,14 @@ img {
   margin: 0;
   color: var(--basic-background);
   margin-top: 23px;
+  margin-left: 3px;
   margin-bottom: 54px;
 }
 
 .menu--bottom {
   margin-top: 28px;
-  padding-left: 96px;
+  padding-left: 92px;
+  padding-right: 1px;
 }
 
 .footer-bottom {
@@ -1279,13 +1279,14 @@ img {
 .copyright {
   margin: 0;
   width: 227px;
+  margin-left: 1px;
 }
 
 .social-networks {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 97px;
-  margin-right: 55px;
+  margin-left: 110px;
+  margin-right: 68px;
 }
 
 .social-networks__link {
@@ -1349,6 +1350,7 @@ img {
 .who-do {
   margin: 0;
   width: 98px;
+  margin-right: 13px;
 }
 
 /*-----  ОФОРМЛЕНИЕ СТРАНИЦЫ КАТАЛОГ  -----*/
@@ -1359,7 +1361,7 @@ img {
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 13px;
   text-transform: uppercase;
-  margin-top: 20px;
+  margin-top: 18px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -1368,7 +1370,7 @@ img {
 .breadcrumbs__item::before {
   content: '';
   position: absolute;
-  top: 5px;
+  top: 6px;
   left: -25px;
   width: 8px;
   height: 12px;
@@ -1378,7 +1380,7 @@ img {
 
 .breadcrumbs__item {
   position: relative;
-  margin-right: 40px;
+  margin-right: 41px;
 }
 
 .breadcrumbs__item--current::before {
@@ -1397,9 +1399,11 @@ img {
 .popular--catalog {
   width: 100%;
   background-color: var(--add-greyblue);
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 33px;
+  padding-bottom: 32px;
   padding-left: 29px;
+  margin-top: 17px;
+  margin-bottom: 20px;
 }
 
 .tools {
@@ -1414,10 +1418,9 @@ img {
 
 .filtr {
   text-transform: uppercase;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   padding-left: 18px;
-  margin-bottom: 14px;
   background-color: var(--add-greypink);
   border-radius: 2px;
 }
@@ -1547,33 +1550,23 @@ img {
   flex-wrap: wrap;
   margin-bottom: 28px;
   border-radius: 2px;
-}
-
-.sort-panel__item {
-  flex-grow: 1;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.sort-panel__item:first-child {
-  padding-left: 19px;
-}
-
-.sort-panel__item:last-child {
+  padding-left: 20px;
   padding-right: 14px;
 }
 
-.sort-panel__title {
-  margin-right: 100px;
+.sort-panel__item {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-right: 46px;
+}
+
+.sort-panel__item:last-child {
+  margin-right: 0;
 }
 
 .sort-panel__link {
   color: var(--add-transparent6);
   border-bottom: 1px dotted var(--basic-red);
-}
-
-.sort-panel__link:last-child {
-  margin-right: 46px;
 }
 
 .sort-panel__link:hover {
@@ -1584,6 +1577,10 @@ img {
 .sort-panel__link--active {
   color: var(--basic-red);
   border-bottom: none;
+}
+
+.sort-panel__title {
+  margin-right: 94px;
 }
 
 .icons-sort {
@@ -1723,6 +1720,7 @@ img {
 .modal__field-name {
   font-family: 'Cuprum', 'Arial Narrow', sans-serif;
   font-size: 18px;
+  line-height: 24px;
   color: var(--black);
 }
 
@@ -1737,6 +1735,8 @@ img {
   padding-right: 8px;
   margin-top: 11px;
   margin-bottom: 13px;
+  line-height: 24px;
+  font-size: 13px;
 }
 
 .modal__mail {
