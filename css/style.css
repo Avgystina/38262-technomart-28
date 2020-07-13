@@ -1115,12 +1115,49 @@ img {
 .container--company {
   display: flex;
   justify-content: space-between;
-  margin-top: 70px;
+  margin-top: 49px;
   margin-bottom: 70px;
 }
 
 .company {
   width: 478px;
+}
+
+.company__paragraph {
+  margin: 0;
+}
+
+.company__paragraph--indent {
+  width: 385px;
+  margin-top: 28px;
+}
+
+.company__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 1px;
+  margin-bottom: 28px;
+}
+
+.company__item::before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  background-color: var(--basic-red);
+}
+
+.company__item {
+  padding-left: 37px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.company__item:last-child {
+  margin-bottom: 0;
 }
 
 .company__item {
@@ -1132,7 +1169,7 @@ img {
 
 .button--middle-button {
   padding-left: 40px;
-  padding-right: 40px;
+  padding-right: 41px;
 }
 
 /*-----  КОНТАКТЫ  -----*/
@@ -1141,13 +1178,17 @@ img {
 }
 
 .contacts__paragraph {
+  margin: 0;
   width: 180px;
+  margin-top: 27px;
+  margin-bottom: 32px;
 }
 
 .button--big-button {
   display: flex;
   flex-grow: 1;
   padding-left: 62px;
+  margin-top: 17px;
 }
 
 /*-----  ПОДВАЛ САЙТА  -----*/
