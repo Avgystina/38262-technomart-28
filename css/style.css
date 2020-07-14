@@ -266,7 +266,7 @@ img {
   position: relative;
   padding-top: 10px;
   padding-bottom: 8px;
-  padding-left: 35px;
+  padding-left: 37px;
   padding-right: 30px;
   align-self: flex-start;
 }
@@ -284,11 +284,6 @@ img {
   opacity: 0.3;
 }
 
-/*с таким значением padding-right все совпадает по pp, но получается слишком большое
-расстояние справа у закладки
-.top-panel__link--bookmarks {
-  padding-right: 40px;
-}*/
 .top-panel__link--bookmarks:hover::before {
   opacity: 1;
 }
@@ -315,10 +310,6 @@ img {
   opacity: 0.3;
 }
 
-/* с таким значением падинга все совпадает с pp
-.top-panel__link--basket {
-  padding-right: 29px;
-}*/
 .top-panel__link--basket:hover::before {
   opacity: 1;
 }
@@ -542,8 +533,6 @@ img {
   padding-bottom: 14px;
 }
 
-/*Не стала падинги делать ссылкам, так как по PP начинает все плясать сильно и
-не выравнивается никак*/
 .main-menu__item:first-child {
   padding-left: 24px;
 }
@@ -829,21 +818,32 @@ img {
 .hidden-buttons__link {
   font-family: 'Cuprum', 'Arial Narrow', sans-serif;
   font-size: 14px;
+  line-height: 18px;
   text-transform: uppercase;
-  padding-top: 10px;
-  padding-bottom: 10px;
   border-radius: 2px;
 }
 
-.hidden-buttons__link--buy {
-  padding-left: 53px;
-  padding-right: 40px;
-  background-color: var(--basic-green);
-  margin-top: 20px;
+.hidden-buttons__link--buy::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  width: 15px;
+  height: 15px;
   background-image: url('../img/icon-cart.svg');
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: 0 0;
   opacity: 0.3;
+}
+
+.hidden-buttons__link--buy {
+  position: relative;
+  padding-top: 10px;
+  padding-right: 37px;
+  padding-bottom: 10px;
+  padding-left: 55px;
+  background-color: var(--basic-green);
+  margin-top: 21px;
   box-shadow: inset 0px -3px 0px var(--add-darkgreen);
 }
 
@@ -856,14 +856,14 @@ img {
 }
 
 .hidden-buttons__link--bookmarks {
-  padding-top: 11px;
-  padding-bottom: 9px;
-  padding-left: 32px;
-  padding-right: 33px;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  padding-left: 30px;
+  padding-right: 31px;
   color: var(--add-moreblue);
   background-color: var(--white);
   border: 3px solid var(--basic-green);
-  margin-top: 10px;
+  margin-top: 13px;
 }
 
 .hidden-buttons__link--bookmarks:hover {
