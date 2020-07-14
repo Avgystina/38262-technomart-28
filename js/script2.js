@@ -1,14 +1,14 @@
-var linkBuy = document.querySelector('.hidden-buttons__link--buy');
-var modalBuy = document.querySelector('.modal--basket-window');
-var closeBuy = document.querySelector('.modal__close-button--basket-window');
+var link_buy = document.querySelector('.hidden-buttons__link--buy');
+var modal_buy = document.querySelector('.modal--basket-window');
+var close_buy = document.querySelector('.modal__close-button--basket-window');
 
 /*Открываем модальное окно с сообщением о добавлении товара в корзину*/
-linkBuy.addEventListener('click', function(evt) {
+link_buy.addEventListener('click', function(evt) {
   evt.preventDefault();
-  modalBuy.classList.add('modal--active');
+  modal_buy.classList.add('modal--active');
 })
 /*Закрываем модальное окно с сообщением о добавлении товара в корзину*/
-closeBuy.addEventListener('click', function(evt) {
+close_buy.addEventListener('click', function(evt) {
   evt.preventDefault();
-  modalBuy.classList.remove('modal--active');
+  modal_buy.classList.remove('modal--active');
 });
