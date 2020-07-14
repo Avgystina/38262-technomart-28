@@ -118,7 +118,7 @@
           <div class="filtr">Фильтр:</div>
 
           <form class="form-data" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="form-data__fieldset">
+            <fieldset class="form-data__fieldset form-data__fieldset--filtr-price">
               <legend class="form-data__title">Цена:</legend>
               <div class="form-data__filtr">
                 <div class="form-data__range-controls">
@@ -139,30 +139,27 @@
                 </div>
               </div>
             </fieldset>
-
-            <fieldset class="form-data__fieldset form-data__fieldset--border">
+            <fieldset class="form-data__fieldset form-data__fieldset--filtr-producer">
               <legend class="form-data__title">Производители:</legend>
-              <input type="checkbox" name="bosch" id="filter-bosch" checked>
-              <label for="filter-bosch">bosch</label><br>
-              <input type="checkbox" name="interskol" id="filter-interskol">
-              <label for="filter-interskol">интерскол</label><br>
-              <input type="checkbox" name="makita" id="filter-makita" checked>
-              <label for="filter-makita">makita</label><br>
-              <input type="checkbox" name="dewalt" id="filter-dewalt">
-              <label for="filter-dewalt">dewalt</label><br>
-              <input type="checkbox" name="hitachi" id="filter-hitachi">
-              <label for="filter-hitachi">hitachi</label><br>
+              <input class="form-data__checkbox visually-hidden" type="checkbox" name="bosch" id="filter-bosch" checked>
+              <label class="form-data__label" for="filter-bosch">bosch</label>
+              <input class="form-data__checkbox visually-hidden" type="checkbox" name="interskol" id="filter-interskol">
+              <label class="form-data__label" for="filter-interskol">интерскол</label>
+              <input class="form-data__checkbox visually-hidden" type="checkbox" name="makita" id="filter-makita" checked>
+              <label class="form-data__label" for="filter-makita">makita</label>
+              <input class="form-data__checkbox visually-hidden" type="checkbox" name="dewalt" id="filter-dewalt">
+              <label class="form-data__label" for="filter-dewalt">dewalt</label>
+              <input class="form-data__checkbox visually-hidden" type="checkbox" name="hitachi" id="filter-hitachi">
+              <label class="form-data__label" for="filter-hitachi">hitachi</label>
             </fieldset>
-
-            <fieldset class="form-data__fieldset">
+            <fieldset class="form-data__fieldset form-data__fieldset--filtr-battery">
               <legend class="form-data__title">Питание:</legend>
-              <input type="radio" name="feed" id="filter-battery" value="battery" checked>
-              <label for="filter-battery">Аккумуляторные</label><br>
-              <input type="radio" name="feed" id="filter-network" value="network">
-              <label for="filter-network">Сетевые</label>
+              <input class="form-data__radio visually-hidden" type="radio" name="feed" id="filter-battery" value="battery" checked>
+              <label class="form-data__label-radio" for="filter-battery">Аккумуляторные</label>
+              <input class="form-data__radio visually-hidden" type="radio" name="feed" id="filter-network" value="network">
+              <label class="form-data__label-radio" for="filter-network">Сетевые</label>
             </fieldset>
-
-            <button type="submit">Показать</button>
+            <button class="form-data__filtr-button" type="submit">Показать</button>
           </form>
         </div>
 
@@ -195,6 +192,7 @@
               </a>
             </li>
           </ul>
+
           <section class="catalog">
             <h2 class="visually-hidden">Список товаров</h2>
             <div class="product product--grid">
@@ -290,6 +288,7 @@
               </article>
             </div>
           </section>
+          
           <div class="pages">
             <a class="pages__link pages__link--active">1</a>
             <a class="pages__link" href="#">2</a>
@@ -298,7 +297,6 @@
           </div>
         </div>
       </section>
-
     </div>
 
     <section class="description">
