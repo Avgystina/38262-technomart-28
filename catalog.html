@@ -164,34 +164,32 @@
         </div>
 
         <div class="catalog-column">
-          <ul class="sort-panel">
-            <li class="sort-panel__item">
-              <span class="sort-panel__title">Сортировка:</span>
-            </li>
-            <li class="sort-panel__item">
-              <a class="sort-panel__link sort-panel__link--active" href="#">По цене</a>
-            </li>
-            <li class="sort-panel__item">
-              <a class="sort-panel__link" href="#">По типу</a>
-            </li>
-            <li class="sort-panel__item">
-              <a class="sort-panel__link" href="#">По функционалу</a>
-            </li>
-            <li class="sort-panel__item">
-              <a class="sort-panel__link" href="#" aria-label="Кнопка сортировки по возрастанию">
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-                  <path class="icons-sort icons-sort--active" fill="#231F20" d="M5.5 0L0 10h11z" />
-                </svg>
-              </a>
-            </li>
-            <li class="sort-panel__item">
-              <a class="sort-panel__link" href="#" aria-label="Кнопка сортировки по убыванию">
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-                  <path class="icons-sort" fill="#231F20" d="M5.5 10L0 0h11" />
-                </svg>
-              </a>
-            </li>
-          </ul>
+
+
+          <div class="sort-panel">
+            <span class="sort-panel__title">Сортировка:</span>
+            <ul class="sort-panel__list">
+              <li class="sort-panel__item">
+                <a class="sort-panel__link sort-panel__link--active" href="#">По цене</a>
+              </li>
+              <li class="sort-panel__item">
+                <a class="sort-panel__link" href="#">По типу</a>
+              </li>
+              <li class="sort-panel__item">
+                <a class="sort-panel__link" href="#">По функционалу</a>
+              </li>
+            </ul>
+            <a class="sort-panel__arrow" href="#" aria-label="Кнопка сортировки по возрастанию">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                <path class="icons-sort icons-sort--active" fill="#231F20" d="M5.5 0L0 10h11z" />
+              </svg>
+            </a>
+            <a class="sort-panel__arrow" href="#" aria-label="Кнопка сортировки по убыванию">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                <path class="icons-sort" fill="#231F20" d="M5.5 10L0 0h11" />
+              </svg>
+            </a>
+          </div>
 
           <section class="catalog">
             <h2 class="visually-hidden">Список товаров</h2>

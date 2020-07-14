@@ -1650,27 +1650,32 @@ img {
 }
 
 .sort-panel {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   text-transform: uppercase;
   background-color: var(--add-greypink);
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 28px;
   border-radius: 2px;
   padding-left: 20px;
   padding-right: 14px;
+  margin-bottom: 28px;
+}
+
+.sort-panel__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .sort-panel__item {
   padding-top: 7px;
   padding-bottom: 7px;
-  margin-right: 46px;
+  margin-right: 70px;
 }
 
 .sort-panel__item:last-child {
-  margin-right: 0;
+  margin-right: 46px;
+  margin-left: -4px;
 }
 
 .sort-panel__link {
@@ -1688,8 +1693,19 @@ img {
   border-bottom: none;
 }
 
+.sort-panel__arrow {
+  display: block;
+  padding-top: 7px;
+  padding-right: 21px;
+}
+
+.sort-panel__arrow:last-child {
+  padding-right: 0;
+}
+
 .sort-panel__title {
-  margin-right: 94px;
+  margin-top: 7px;
+  margin-right: 140px;
 }
 
 .icons-sort {
