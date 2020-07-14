@@ -900,13 +900,14 @@ img {
 }
 
 .product__name {
+  margin: 0;
   font-size: 18px;
   line-height: 22px;
   padding-left: 18px;
   padding-right: 18px;
   flex-grow: 1;
-  margin-top: 9px;
-  margin-bottom: 4px;
+  margin-top: 10px;
+  margin-bottom: 6px;
 }
 
 .product__price {
@@ -921,16 +922,17 @@ img {
 }
 
 .product__price--new {
-  width: 141px;
-  min-height: 38px;
   background-image: url('../img/red-button.svg');
   background-repeat: no-repeat;
   background-position: 0 0;
   color: var(--white);
   padding-top: 9px;
-  margin-top: 8px;
-  margin-bottom: 11px;
+  padding-bottom: 13px;
+  padding-right: 42px;
+  margin-top: 7px;
+  margin-bottom: 16px;
   margin-left: 44px;
+  cursor: pointer;
 }
 
 /*-----  ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ  -----*/
@@ -1272,7 +1274,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding-top: 36px;
+  padding-top: 35px;
   padding-bottom: 35px;
 }
 
@@ -1559,26 +1561,26 @@ img {
   margin-top: 16px;
 }
 
-.form-data__checkbox + .form-data__label::before {
+.form-data__checkbox+.form-data__label::before {
   background-image: url('../img/checkbox-off.svg');
 }
 
-.form-data__checkbox:checked + .form-data__label::before {
+.form-data__checkbox:checked+.form-data__label::before {
   background-image: url('../img/checkbox-on.svg');
 }
 
-.form-data__checkbox:hover + .form-data__label::before,
-.form-data__checkbox:focus + .form-data__label::before {
+.form-data__checkbox:hover+.form-data__label::before,
+.form-data__checkbox:focus+.form-data__label::before {
   background-image: url('../img/checkbox-modification-off.svg');
 }
 
-.form-data__checkbox:checked:hover + .form-data__label::before,
-.form-data__checkbox:checked:focus + .form-data__label::before {
+.form-data__checkbox:checked:hover+.form-data__label::before,
+.form-data__checkbox:checked:focus+.form-data__label::before {
   background-image: url('../img/checkbox-modification-on.svg');
 }
 
-.form-data__checkbox:disabled + .form-data__label::before,
-.form-data__checkbox:disabled + .form-data__label {
+.form-data__checkbox:disabled+.form-data__label::before,
+.form-data__checkbox:disabled+.form-data__label {
   opacity: 0.3;
 }
 
@@ -1606,26 +1608,26 @@ img {
   margin-top: 23px;
 }
 
-.form-data__radio + .form-data__label-radio::before {
+.form-data__radio+.form-data__label-radio::before {
   background-image: url('../img/radio-off.svg');
 }
 
-.form-data__radio:checked + .form-data__label-radio::before {
+.form-data__radio:checked+.form-data__label-radio::before {
   background-image: url('../img/radio-on.svg');
 }
 
-.form-data__radio:hover + .form-data__label-radio::before,
-.form-data__radio:focus + .form-data__label-radio::before {
+.form-data__radio:hover+.form-data__label-radio::before,
+.form-data__radio:focus+.form-data__label-radio::before {
   background-image: url('../img/radio-modification-off.svg');
 }
 
-.form-data__radio:checked:hover + .form-data__label-radio::before,
-.form-data__radio:checked:focus + .form-data__label-radio::before {
+.form-data__radio:checked:hover+.form-data__label-radio::before,
+.form-data__radio:checked:focus+.form-data__label-radio::before {
   background-image: url('../img/radio-modification-on.svg');
 }
 
-.form-data__radio:disabled + .form-data__label-radio::before,
-.form-data__radio:disabled + .form-data__label-radio {
+.form-data__radio:disabled+.form-data__label-radio::before,
+.form-data__radio:disabled+.form-data__label-radio {
   opacity: 0.3;
 }
 
@@ -1706,8 +1708,8 @@ img {
 .pages {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 48px;
-  margin-bottom: 60px;
+  margin-top: 50px;
+  margin-bottom: 49px;
 }
 
 .pages__link {
@@ -1715,11 +1717,11 @@ img {
   color: var(--black);
   border: 1px solid var(--basic-greylight);
   border-radius: 2px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-right: 10px;
+  margin-right: 9px;
   margin-bottom: 10px;
 }
 
@@ -1736,18 +1738,23 @@ img {
   background-color: var(--basic-red);
 }
 
+.pages__link--next {
+  padding-left: 31px;
+  padding-right: 31px;
+}
+
 .description {
   background-color: var(--basic-background);
+  padding-top: 43px;
+  padding-bottom: 69px;
 }
 
 .black-titles--indent {
-  padding-top: 64px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .description__paragraph {
   margin: 0;
-  padding-bottom: 68px;
 }
 
 /*-----  МОДАЛЬНЫЕ ОКНА  -----*/
