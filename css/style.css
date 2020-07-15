@@ -1354,6 +1354,10 @@ img {
   margin-right: 41px;
 }
 
+.breadcrumbs__item--indent {
+  margin-left: 15px;
+}
+
 .breadcrumbs__item--current::before {
   /*Убираем стрелку у первого элемента*/
   display: none;
@@ -1363,9 +1367,22 @@ img {
   margin-right: 0;
 }
 
+.breadcrumbs__link--home-icon::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 15px;
+  height: 12px;
+  background-image: url('../img/icon-home.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .breadcrumbs__link {
   color: var(--black);
   cursor: pointer;
+  position: relative;
 }
 
 .popular--catalog {
