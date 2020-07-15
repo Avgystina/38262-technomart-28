@@ -483,6 +483,7 @@ img {
 .user-block__orders {
   font-size: 16px;
   color: var(--add-moreblue);
+  cursor: pointer;
 }
 
 .user-block__orders:hover,
@@ -507,6 +508,7 @@ img {
 .user-block__private-office {
   font-size: 16px;
   color: var(--add-moreblue);
+  cursor: pointer;
 }
 
 /*-----  МЕНЮ САЙТА  -----*/
@@ -1420,6 +1422,7 @@ img {
 
 .breadcrumbs__link {
   color: var(--black);
+  cursor: pointer;
 }
 
 .popular--catalog {
@@ -1705,6 +1708,7 @@ img {
 .sort-panel__link {
   color: var(--add-transparent6);
   border-bottom: 1px dotted var(--basic-red);
+  cursor: pointer;
 }
 
 .sort-panel__link:hover {
@@ -1721,6 +1725,7 @@ img {
   display: block;
   padding-top: 7px;
   padding-right: 21px;
+  cursor: pointer;
 }
 
 .sort-panel__arrow:last-child {
@@ -1763,6 +1768,7 @@ img {
   padding-right: 15px;
   margin-right: 9px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .pages__link:hover {
