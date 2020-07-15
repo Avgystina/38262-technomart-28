@@ -462,6 +462,14 @@ img {
   padding-right: 14px;
 }
 
+.button-header--link-profile:hover .user-block__text {
+  color: var(--black);
+}
+
+.button-header--link-profile:active .user-block__text {
+  color: var(--basic-greylight);
+}
+
 .button-header--logout {
   padding-right: 14px;
 }
