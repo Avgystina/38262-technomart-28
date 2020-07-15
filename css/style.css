@@ -1003,15 +1003,28 @@ img {
   color: var(--white);
 }
 
-.second-slider__list {
-  max-width: 619px;
-  position: relative;
-}
-
 .second-slider__slide {
   display: none;
   min-width: 619px;
   min-height: 233px;
+}
+
+.second-slider__slide--car {
+  background-image: url('../img/car.png');
+  background-repeat: no-repeat;
+  background-position: right 19px;
+}
+
+.second-slider__slide--medal {
+  background-image: url('../img/medal.png');
+  background-repeat: no-repeat;
+  background-position: right 0;
+}
+
+.second-slider__slide--credit {
+  background-image: url('../img/credit.png');
+  background-repeat: no-repeat;
+  background-position: right -3px;
 }
 
 .second-slider__slide--active {
@@ -1046,24 +1059,6 @@ img {
   width: 280px;
   margin-top: 33px;
   margin-bottom: 34px;
-}
-
-.second-slider__image--car {
-  position: absolute;
-  top: 19px;
-  right: 1px;
-}
-
-.second-slider__image--medal {
-  position: absolute;
-  top: -4px;
-  right: -8px;
-}
-
-.second-slider__image--credit {
-  position: absolute;
-  top: -3px;
-  right: -10px;
 }
 
 .button--credit {
